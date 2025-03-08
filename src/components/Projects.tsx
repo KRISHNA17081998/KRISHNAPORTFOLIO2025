@@ -16,7 +16,8 @@ const Projects = () => {
           className="bg-gray-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
         >
           <img 
-            src={"/Pictures/RANDOMPASSWORDGENERATOR.png"}  //             alt="Random Password Generator"
+            src={"/Pictures/RANDOMPASSWORDGENERATOR.png"}
+            alt="Random Password Generator"
             className="w-full h-48 object-cover"
           />
           <div className="p-6">
