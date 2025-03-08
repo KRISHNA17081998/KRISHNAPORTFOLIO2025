@@ -13,7 +13,7 @@ const Hero = () => {
      
      
 <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-purple-600 text-transparent bg-clip-text">
-DRACULA BOY</h1>
+RAKATLA KRISHNA</h1>
 
         <div className="h-16 mb-8">
           <TypeAnimation
@@ -30,13 +30,17 @@ DRACULA BOY</h1>
           />
         </div>
   
-          <button
- className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 rounded-full font-semibold hover:opacity-90 transition-opacity mb-8">
-          <div className="flex items-center gap-2">    
-            <Download size={20} />
-            Download Resume
-          </div>
-        </button>
+        <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 rounded-full font-semibold hover:opacity-90 transition-opacity mb-8">
+  <div className="flex items-center gap-2">
+    <a 
+      href="/Pictures/RESUME.pdf"  // Path to the resume
+      download  // This makes the browser download the file
+      className="flex items-center gap-2">
+      <Download size={20} />
+      Download Resume
+    </a>
+  </div>
+</button>
 
         <div className="flex gap-6 justify-center">
           <a href="https://github.com" target="_blank" rel="noopener noreferrer" 

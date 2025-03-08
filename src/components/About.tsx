@@ -13,7 +13,7 @@ const About = () => {
             className="md:w-1/2"
           >
             <img 
-              src="ME.jpg" 
+              src="/Pictures/ME.jpg" 
               alt="Developer" 
               className="rounded-lg shadow-xl w-full h-[500px] object-cover"
             />

@@ -16,7 +16,7 @@ const Projects = () => {
           className="bg-gray-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
         >
           <img 
-            src={`RANDOMPASSWORDGENERATOR.png`}  // Replace with actual image
+            src={"/Pictures/RANDOMPASSWORDGENERATOR.png"}  // Replace with actual image
             alt="Random Password Generator"
             className="w-full h-48 object-cover"
           />
@@ -49,13 +49,14 @@ const Projects = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="bg-gray-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
-        >
-          <img 
-            src={`RANDOMCOLORGENERATOR.jpg`}  
-            alt="Random Color Generator"
-            className="w-full h-48 object-cover"
-          />
+          className="bg-gray-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+          
+          <img
+  src="/Pictures/RANDOMCOLORGENERATOR.jpg"
+  alt="Random Color Generator"
+  className="w-full h-48 object-cover"
+/>
+
           <div className="p-6">
             <h3 className="text-xl font-semibold mb-2">RANDOM COLOR GENERATOR</h3>
             <p className="text-gray-600 mb-4">
@@ -88,7 +89,7 @@ const Projects = () => {
           className="bg-gray-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
         >
           <img 
-            src={`QRCODEGENERATOR.jpg`}  // Replace with actual image
+            src={"/Pictures/QRCODEGENERATOR.jpg"}  // Replace with actual image
             alt="QR Code Generator"
             className="w-full h-48 object-cover"
           />
@@ -124,7 +125,7 @@ const Projects = () => {
           className="bg-gray-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
         >
           <img 
-            src={`CALCULATOR.jpg`}  // Replace with actual image
+            src={"/Pictures/CALCULATOR.jpg"}  // Replace with actual image
             alt="Calculator App"
             className="w-full h-48 object-cover"
           />
