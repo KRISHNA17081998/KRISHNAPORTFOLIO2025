@@ -3,24 +3,23 @@ import { Phone, Mail, MapPin } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 
 const Contact = () => {
-  const form = useRef<HTMLFormElement>(null); // Correct reference name
+  const form = useRef<HTMLFormElement>(null);
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
 
   const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!form.current) return; // Use 'form' instead of 'formRef'
+    if (!form.current) return;
 
     setStatus('sending');
     emailjs.sendForm(
       import.meta.env.VITE_EMAILJS_SERVICE_ID,
       import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-      form.current, // Use 'form' instead of 'formRef'
+      form.current,
       import.meta.env.VITE_EMAILJS_PUBLIC_KEY
     )
       .then(() => {
         setStatus('success');
-        if (form.current)
-          form.current.reset(); // Use 'form' instead of 'formRef'
+        if (form.current) form.current.reset();
         setTimeout(() => setStatus('idle'), 3000);
       })
       .catch(() => {
@@ -33,7 +32,7 @@ const Contact = () => {
     <section className="min-h-screen bg-gray-100 py-20 px-4">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl font-bold text-center mb-16">Contact Me</h2>
-        
+
         <div className="bg-white p-8 rounded-lg shadow-lg mb-12">
           <h3 className="text-2xl font-semibold mb-6">Get in Touch</h3>
           <form ref={form} onSubmit={sendEmail} className="space-y-6">
@@ -92,19 +91,20 @@ const Contact = () => {
             <a href="#contact" className="text-blue-600 hover:text-blue-800">Contact</a>
           </div>
         </div>
-        
-        <div className="grid grid-cols-3 gap-4 text-sm text-gray-600">
-          <div className="flex items-center justify-center gap-2">
+
+        {/* Updated Grid Layout for Contact Info */}
+        <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-8 text-sm text-gray-600">
+          <div className="flex items-center justify-center gap-3 sm:gap-2">
             <Phone size={16} />
-            <span>+919953120067</span>
+            <span className="text-center">+919953120067</span>
           </div>
-          <div className="flex items-center justify-center gap-2">
+          <div className="flex items-center justify-center gap-3 sm:gap-2">
             <Mail size={16} />
-            <span>krishnatest52@gmail.com</span>
+            <span className="text-center">krishnatest52@gmail.com</span>
           </div>
-          <div className="flex items-center justify-center gap-2">
+          <div className="flex items-center justify-center gap-3 sm:gap-2">
             <MapPin size={16} />
-            <span>New Delhi,India</span>
+            <span className="text-center">New Delhi, India</span>
           </div>
         </div>
       </div>
